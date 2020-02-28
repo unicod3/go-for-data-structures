@@ -1,5 +1,4 @@
-Data Structures
-================
+# Data Structures  [![](https://github.com/unicod3/go-for-data-structures/workflows/test/badge.svg)](https://github.com/unicod3/go-for-data-structures/actions)
 
 This is a personal repo which I try to implement data structures in Golang while trying to learn golang.
 
