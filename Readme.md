@@ -9,9 +9,9 @@ If you see any issue or possible improvements on the codebase please open an iss
 TODO
 -----------
 
-[x] [Dynamic Array](https://github.com/unicod3/go-for-data-structures/tree/master/dynamicarr)
+[*] [Dynamic Array](https://github.com/unicod3/go-for-data-structures/tree/master/dynamicarr)
 
-[ ] Linked List
+[*] Linked List
 
 [ ] Stack
 
