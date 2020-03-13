@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestPrepend(t *testing.T) {
+func TestLinkedListPrepend(t *testing.T) {
 	want := []string{
 		"foo",
 		"bar",
@@ -22,7 +22,7 @@ func TestPrepend(t *testing.T) {
 	list.Display()
 }
 
-func TestAppend(t *testing.T) {
+func TestLinkedListAppend(t *testing.T) {
 	want := []string{
 		"foo",
 		"bar",
@@ -40,7 +40,7 @@ func TestAppend(t *testing.T) {
 	list.Display()
 }
 
-func TestPop(t *testing.T) {
+func TestLinkedListPop(t *testing.T) {
 	want := []string{
 		"foo",
 		"bar",
@@ -63,5 +63,42 @@ func TestPop(t *testing.T) {
 		}
 	}
 	list.Display()
+}
 
+func TestLinkedListInsertAt(t *testing.T) {
+	want := []string{
+		"foo",
+		"bar",
+		"baz",
+	}
+	list := NewLinkedList()
+	for i := 0; i < 3; i++ {
+		list.Append(want[i])
+	}
+
+	val := "inserted"
+	list.InsertAt(2, val)
+	got := list.GetLength()
+	if got != 4 {
+		t.Errorf("got: %d  want: %d", got, 4)
+	}
+	list.Display()
+}
+
+func TestLinkedListGetAt(t *testing.T) {
+	want := []string{
+		"foo",
+		"bar",
+		"baz",
+	}
+	list := NewLinkedList()
+	for i := 0; i < 3; i++ {
+		list.Append(want[i])
+	}
+
+	got := list.GetAt(2)
+	if got != want[2] {
+		t.Errorf("got: %s  want: %s", got, want[2])
+	}
+	list.Display()
 }
